@@ -1,0 +1,146 @@
+/* --- BODY I CONTAINER --- */
+body {
+   margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #777777; /* cela pozadina siva */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #777777;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #777777;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-wrap: wrap; /* dozvoljava prelazak u novi red na manjim ekranima */
+}
+
+ul li a {
+    display: block;
+    color: white;
+    padding: 14px 40px; /* manje padding za početak */
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+ul li a:hover {
+    background-color: #111111;
+    border-radius: 10px;
+    box-shadow: rgba(255, 99, 71, 0.5) 0px 0px 10px 0px;
+}
+
+/* --- MAIN SEKCija --- */
+main {
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Tekst u listama */
+.listadva {
+    margin-top: 20px;
+    color: aliceblue;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+}
+
+.rounded-footer {
+    border-radius: 15px 15px 15px 15px; 
+    overflow: hidden;
+    background-color: #333333;
+    padding: 15px 0; 
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;
+    max-width: 1200px;
+    margin: 20px auto 0 auto; /* centriran kao header */
+}
+
+.footer-link {
+    color: #b94d4d; /* tamno-crvena boja */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #e40f0f; /* svetlija na hover */
+}
+
+/* --- SLIKE I HOVER --- */
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+img.rounded-3 {
+    border-radius: 0.75rem !important;
+}
+
+/* --- GRID: “WHAT I DO” --- */
+.skill-card {
+    background-color: #888888;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    ul li a {
+        padding: 12px 25px; /* manje na tabletima */
+    }
+}
+
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column; /* meni vertikalno na mobilnim */
+    }
+
+    ul li a {
+        padding: 10px 20px; /* još manji padding */
+    }
+
+    .container {
+        padding: 20px 10px; /* manji padding na mobilnim */
+    }
+
+    .skill-card {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    ul li a {
+        padding: 8px 15px; /* mobilni telefoni */
+        text-align: center;
+    }
+
+    main h1, main p {
+        font-size: 1rem; /* manji font na malim ekranima */
+    }
+}
+
